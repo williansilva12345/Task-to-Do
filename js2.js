@@ -55,7 +55,7 @@ var course = ()=>{
  
 
 		
-		
+	
 		
 	
 		
@@ -66,7 +66,12 @@ var course = ()=>{
 	
 	 
 	 input.focus()
-	
+	  if(typeof input !== String){
+		
+		alert("hello ")
+		div.remove()
+		
+	}	
 	
 }
 	
@@ -90,21 +95,6 @@ var course = ()=>{
 
 		
 	})
-	
-		input.addEventListener("keypress",function(event1){
-		
-		
-		if(event1.keyCode === 32){
-				
-			input.value = "Enter"
-				
-				
-		}
-			
-		})	
-	
-
-
 	
 	
 	
