@@ -52,7 +52,10 @@ var course = ()=>{
 	div.innerHTML  = input.value
 	
 	
+ 
 
+		
+		
 		
 	
 		
@@ -65,13 +68,7 @@ var course = ()=>{
 	 input.focus()
 	
 	
-	if(input.value === ""){
-		
-		div.remove()
-		
-	
-		}
-	
+}
 	
 
 				
@@ -79,7 +76,7 @@ var course = ()=>{
 
 
 
-}
+
 
 
 	btn.addEventListener("click",(evt)=>{
@@ -94,9 +91,21 @@ var course = ()=>{
 		
 	})
 	
+		input.addEventListener("keypress",function(event1){
+		
+		
+		if(event1.keyCode === 32){
+				
+			input.value = "Enter"
+				
+				
+		}
+			
+		})	
 	
 
 
+	
 	
 	
 	
