@@ -37,7 +37,7 @@ btn2.addEventListener("click",()=>{
 var course = ()=>{
 	
 	
-	
+
 	
 	
 	var div  = document.createElement("div")
@@ -49,16 +49,14 @@ var course = ()=>{
 	evt.target.classList.toggle("back")
 		
 	})
+	
+	
 	div.innerHTML  = input.value
 	
-	
- 
 
 		
+
 	
-		
-	
-		
 
 	
 	caixa2.appendChild(div)
@@ -66,12 +64,6 @@ var course = ()=>{
 	
 	 
 	 input.focus()
-	  if(typeof input !== String){
-		
-		alert("hello ")
-		div.remove()
-		
-	}	
 	
 }
 	
@@ -89,13 +81,42 @@ var course = ()=>{
 	
 	  course()
 	  
-	  console.log(evt.target)
+
 		
-				input.value = ""
+				
 
 		
 	})
 	
 	
+	
+	input.addEventListener("keypress",function(e){
+		
+		 if(!checkChar(e)){
+			 
+			 div.innerHTML = "Digite algo valido"
+			 e.preventDefault()
+			 
+		 }
+		
+	})
+	
+	
+	function checkChar(e){
+		
+		const caracter = String.fromCharCode(e.keyCode)
+				
+		console.log(e.keyCode)
+		
+		const pattern = "[a-zA-Z0-9]";
+		
+		if(caracter.match(pattern)){
+			
+			console.log(caracter)
+			return true
+			
+		}
+			
+	}
 	
 	
